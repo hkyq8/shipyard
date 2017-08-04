@@ -47,15 +47,4 @@ class DocumentResource(BaseResource):
 
 
     def on_delete(self,req,resp):
-        # TODO updates configdocs to be the lastdeployed versions in deckhand
-        
-
-
-
-
-
-
-
-
-
-
+        pass

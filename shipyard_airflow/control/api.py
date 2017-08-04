@@ -29,6 +29,7 @@ from .airflow_connections import AirflowDeleteConnectionResource
 from .airflow_connections import AirflowListConnectionsResource
 from .airflow_get_version import GetAirflowVersionResource
 from .middleware import AuthMiddleware, ContextMiddleware, LoggingMiddleware
+from .document_staging_resources import DocumentResource
 
 def start_api():
 
@@ -58,7 +59,7 @@ def start_api():
         # added routes for document staging API
 
         ('/configDocs',DocumentResource()),
-        ('/secrets',SecretsResource()),
+#        ('/secrets',SecretsResource()),
     ]
 
     for path, res in v1_0_routes:
