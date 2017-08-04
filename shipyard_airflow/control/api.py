@@ -54,6 +54,11 @@ def start_api():
         ('/connections/{action}/conn_id/{conn_id}', AirflowDeleteConnectionResource()),
         ('/connections/{action}', AirflowListConnectionsResource()),
         ('/airflow/version', GetAirflowVersionResource()),
+
+        # added routes for document staging API
+
+        ('/configDocs',DocumentResource()),
+        ('/secrets',SecretsResource()),
     ]
 
     for path, res in v1_0_routes:
